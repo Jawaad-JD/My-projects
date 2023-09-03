@@ -1,0 +1,28 @@
+n = input("Enter the symbol: ")
+max = int(input("Enter the max number of symbols , should be an odd number: "))
+spaces = int((max-1)/2) #total number of spaces
+nmsymbols = 1 #total number of symbols
+mxreps = int((max+1)/2) #number of times the outer loop is repeated.
+num = 1
+censpaces = -1
+
+for i in range(mxreps):
+    for j in range(spaces):
+        print(" ", end="")
+    for x in range(num):
+        print(n, end="")
+    for q in range(censpaces):
+        if censpaces == -1:
+            pass
+        else:
+            print(" ", end="")
+    for z in range(num):
+        if i == 0:
+            pass
+        else:
+            print(n, end="")
+    for p in range(spaces):
+         print(" ", end="")
+    print() #to move to the next line after each rep.
+    spaces -= 1
+    censpaces += 2
